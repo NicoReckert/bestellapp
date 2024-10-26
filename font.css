@@ -1,0 +1,24 @@
+ @font-face {
+     font-display: swap;
+     font-family: 'OpenSans';
+     src: url('assets/fonts/OpenSans_Condensed-Bold.ttf') format('ttf');
+     font-style: normal;
+     font-weight: bold;
+ }
+
+ @font-face {
+     font-display: swap;
+     font-family: 'Pacifico';
+     src: url('assets/fonts/Pacifico-Regular.ttf') format('truetype');
+     font-style: normal;
+     font-weight: 400;
+
+ }
+
+ @font-face {
+     font-display: swap;
+     font-family: 'Lobster';
+     src: url('assets/fonts/Lobster-Regular.ttf') format('truetype');
+     font-style: normal;
+     font-weight: 400;
+ }

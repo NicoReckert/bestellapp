@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="icon" href="assets/icons/favicon-16x16.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+    <script src="foods.js"></script>
+    <script src="templates.js"></script>
+</head>
+
+<body onload="inet()">
+    <div class="allcontent">
+
+        <header>
+            <div class="header-content-box">
+                <img class="logo-img" src="assets/img/Logo.png" alt="Logo">
+                <div class="container" id="container" onclick="myFunction()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </header>
+
+        <section class="main-content">
+            <div class="title-categorie-food-basket-box">
+                <div class="title-categorie-food-box pos-relative" id="title-categorie-food-box">
+                    <h3 class="title">Thai Yammy Restaurant</h3>
+                    <div class="categorie-box">
+                        <button class="button-food-category" id="button-food-category-soup"
+                            onclick="fillFoodCategoryImgSrc(event); fillAllFoodsArray(event); renderFoods(this); scrollToFoods(); highLightingButton(event)"
+                            value="soup">Suppen</button>
+                        <button class="button-food-category" id="button-food-category-padthai"
+                            onclick="fillFoodCategoryImgSrc(event); fillAllFoodsArray(event); renderFoods(this); scrollToFoods(); highLightingButton(event)"
+                            value="padthai">Pad Thai</button>
+                        <button class="button-food-category" id="button-food-category-wokdish"
+                            onclick="fillFoodCategoryImgSrc(event); fillAllFoodsArray(event); renderFoods(this); scrollToFoods(); highLightingButton(event)"
+                            value="wokdish">Wok-Gerichte</button>
+                    </div>
+                    <div class="food-box" id="food-box">
+
+                    </div>
+                    <div class="overlay-mobile-basket d-none" id="overlay-mobile-basket">
+                        <div class="basket-mobile-box">
+                            <div class="basket-mobile">
+                                <div class="close-button-mobile-basket-box">
+                                    <button class="close-button-mobile-basket" onclick="toggleDNone(); dNoneFoodBox(); togglePositionRelative(); scrollToFoods()">X</button>
+                                </div>
+                                <div class="img-title-basket-box">
+                                    <img class="img-button-mobile-basket"
+                                        src="assets/img/shopping-cart-1371193_1280.png" alt="">
+                                    <h2>Warenkorb</h2>
+                                </div>
+                                <div class="food-box-basket" id="food-box-basket-mobile">
+
+                                </div>
+                                <div class="prices">
+                                    <span>Zwischensumme</span>
+                                    <span id="sum2">0,00 €</span>
+                                </div>
+                                <div class="prices">
+                                    <span>Lieferkosten</span>
+                                    <span id="price-delivery" value="5.00">5,00 €</span>
+                                </div>
+                                <div class="prices price-total-box">
+                                    <span>Gesamt</span>
+                                    <span id="price-total2" value="0.00">0,00 €</span>
+                                </div>
+                                <div class="button-order-basket-box">
+                                    <button class="button-order-basket" id="button-order-mobile-basket" onclick="toggleTransformToView(); timerStart(); deleteAllInBasket();">Bestellung
+                                        aufgeben</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-mobile-basket-box">
+                        <button class="button-mobile-basket" type="button" onclick="togglePositionRelative(); toggleDNone(); dNoneFoodBox(); scrollToTop()"><span
+                                class="span-button-mobile-basket" id="span-button-mobile-basket">0</span><img
+                                class="img-button-mobile-basket"
+                                src="assets/img/shopping-cart-1371193_1280.png">Warenkorb</button>
+                    </div>
+
+
+                </div>
+                <div class="basket-box">
+                    <div class="basket">
+                        <div class="img-title-basket-box">
+                            <img class="img-button-mobile-basket" src="assets/img/shopping-cart-1371193_1280.png"
+                                alt="">
+                            <h2>Warenkorb</h2>
+                        </div>
+                        <div class="food-box-basket" id="food-box-basket">
+
+                        </div>
+                        <div class="prices">
+                            <span>Zwischensumme</span>
+                            <span id="sum1">0,00 €</span>
+                        </div>
+                        <div class="prices">
+                            <span>Lieferkosten</span>
+                            <span id="price-delivery" value="5.00">5,00 €</span>
+                        </div>
+                        <div class="prices price-total-box">
+                            <span>Gesamt</span>
+                            <span id="price-total1" value="0.00">0,00 €</span>
+                        </div>
+                        <div class="button-order-basket-box">
+                            <button class="button-order-basket" id="button-order-basket" onclick="toggleTransformToView(); timerStart(); deleteAllInBasket()">Bestellung aufgeben</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content-box">
+            <img class="logo-img" src="assets/img/Logo.png" alt="Logo">
+        </div>
+    </footer>
+
+    <div class="overlay-order-complete" id="overlay-order-complete">
+        <span>Vielen Dank für deine Bestellung</span>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
